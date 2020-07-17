@@ -3,10 +3,12 @@ package org.example;
 public class Person {
     String name;
     int age;
+    String gender;
 
-    public Person(String name, int age) {
+    public Person(String name, int age, String gender) {
         this.name = name;
         this.age = age;
+        this.gender = gender;
     }
 
     public String getName() {
@@ -25,8 +27,16 @@ public class Person {
         this.age = age;
     }
 
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
     @Override
     public String toString() {
-        return "name='" + name + "' and age=" + age;
+        return "name = '" + name + "' and age = " + age + " and gender = " + gender;
     }
 }
